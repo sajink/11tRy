@@ -14,10 +14,13 @@
   p {
     @apply mt-4 mb-2;
   }
+}
+
+@layer components {
   .hline {
-    @apply border-t border-gray-900 my-8 h-px w-full;
+    @apply border-gray-900 border-t my-8 h-px w-full;
   }
   .vline {
-    @apply border-l border-gray-900 mx-8 w-px h-full;
+    @apply border-gray-900 border-l mx-8 w-px h-full inline-block;
   }
 }

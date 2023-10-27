@@ -1,5 +1,6 @@
 module.exports = {
   content: ["src/**/*.{njk,md,html}"],
+  safelist: ['hline','vline'],
   theme: {
     fontFamily: {
       sans: ['Syne', 'sans-serif'],

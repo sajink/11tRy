@@ -564,6 +564,35 @@ p{
   --tw-backdrop-sepia:  ;
 }
 
+.hline{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  height: 1px;
+  width: 100%;
+  border-top-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(17 24 39 / var(--tw-border-opacity));
+}
+
+.vline{
+  margin-left: 2rem;
+  margin-right: 2rem;
+  display: inline-block;
+  height: 100%;
+  width: 1px;
+  border-left-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(17 24 39 / var(--tw-border-opacity));
+}
+
+.float-right{
+  float: right;
+}
+
+.float-left{
+  float: left;
+}
+
 .mb-10{
   margin-bottom: 2.5rem;
 }
@@ -572,8 +601,20 @@ p{
   display: block;
 }
 
+.inline-block{
+  display: inline-block;
+}
+
+.inline{
+  display: inline;
+}
+
 .flex{
   display: flex;
+}
+
+.h-32{
+  height: 8rem;
 }
 
 .w-full{
