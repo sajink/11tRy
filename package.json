@@ -1,0 +1,23 @@
+{
+  "name": "11ty",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm-run-all -p dev:*",
+    "build": "run-s build:*",
+    "dev:11ty": "npx @11ty/eleventy --serve",
+    "dev:css": "npx tailwindcss -i src/_includes/css/tw.css -o src/_static/css/tw.min.css --watch --postcss",
+    "build:11ty": "npx @11ty/eleventy",
+    "build:css": "npx tailwindcss -i src/_includes/css/tw.css -o src/_static/css/tw.min.css --postcss --minify"
+    },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.3"
+  }
+}

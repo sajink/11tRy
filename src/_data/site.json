@@ -1,0 +1,19 @@
+{
+  "title": "Aegir",
+  "description": "Ultrasonic water meters",
+  "author": "i47 Labs",
+  "image": "/img/logo.png",
+  "language": "en",
+  "social": [
+    {
+      "title": "LinkedIn",
+      "url": "https://aegir.in",
+      "image": "/img/github.svg"
+    },
+    {
+      "title": "Insta",
+      "url": "https://i47.in",
+      "image": "/img/medium.svg"
+    }
+  ]
+}
