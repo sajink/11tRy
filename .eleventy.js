@@ -1,17 +1,37 @@
+const Image = require("@11ty/eleventy-img");
+const htmlmin = require("html-minifier");
+const { isProd, environment } = require("./src/_data/env");
+
 module.exports = function(eleventyConfig) {
-    eleventyConfig.addPassthroughCopy({ './src/_static/': '/' });
-    return {
-        dir: {
-          input: 'src',
-          output: 'public',
-          data: './_data',
-          includes: './_includes',
-          layouts: './_layouts'
-        },
-        templateFormats: [
-          'md',
-          'njk'
-        ],
-        htmlTemplateEngine: 'njk'
-      };
+  // Copy all static files to publish folder
+  eleventyConfig.addPassthroughCopy({ './src/_static/': '/' });
+
+  eleventyConfig.addShortcode("line", function(dir) {return '<div class="'+(dir??'h')+'line"></div>';});
+
+  // Minify HTML
+  if(isProd) {
+    eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
+      if (outputPath && outputPath.endsWith(".html")) {
+        let minified = htmlmin.minify(content, {
+          useShortDoctype: true,
+          removeComments: true,
+          collapseWhitespace: true
+        });
+        return minified;
+      }
+      return content;
+    });
+  }
+
+  return {
+      dir: {
+        input: 'src',
+        output: 'public',
+        data: './_data',
+        includes: './_includes',
+        layouts: './_layouts'
+      },
+      templateFormats: ['md','njk'],
+      htmlTemplateEngine: 'njk'
+    };
 };

@@ -6,12 +6,18 @@
 
 @layer base {
   h1 {
-    @apply text-2xl sm:text-3xl font-bold mt-5 mb-3;
+    @apply text-7xl sm:text-5xl font-bold mt-5 mb-3;
   }
   a {
     @apply cursor-pointer hover:underline;
   }
   p {
     @apply mt-4 mb-2;
+  }
+  .hline {
+    @apply border-t border-gray-900 my-8 h-px w-full;
+  }
+  .vline {
+    @apply border-l border-gray-900 mx-8 w-px h-full;
   }
 }

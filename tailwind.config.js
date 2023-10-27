@@ -1,8 +1,10 @@
 module.exports = {
   content: ["src/**/*.{njk,md,html}"],
   theme: {
-    extend: {},
+    fontFamily: {
+      sans: ['Syne', 'sans-serif'],
+      serif: ['"Plus Jakarta Sans"', 'ui-serif'],
+    }
   },
   plugins: [],
 }
-

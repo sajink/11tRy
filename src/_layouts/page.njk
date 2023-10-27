@@ -5,9 +5,9 @@ layout: base.njk
   {% include "navbar.njk" %}
 </header>
 <main id="{{ title }}" class="flex flex-col items-center justify-center w-full">
-  <div class="self-center w-full px-4 pt-8 sm:w-2/3 xl:w-1/2 sm:px:0">
-    <h1 class="mb-10 tracking-widest text-gray-700 uppercase">{{ title }}</h1>
-    <div class="text-lg font-light text-black">
+  <div class="self-center w-full px-8 pt-8">
+    <h1 class="mb-10 tracking-widest text-gray-700">{{ title }}</h1>
+    <div class="text-lg font-light font-serif text-black">
       {{ content | safe }}
     </div>
   </div>
