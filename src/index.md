@@ -14,15 +14,16 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tellus velit, plac
 
 {% line %}
 
-<div class="h-32 flex">
+{% box 'h-40' %}
+Fusce urna nisl, eleifend in sodales at, lacinia ultrices lacus. Donec fringilla ullamcorper turpis. Integer sit amet tellus id urna fringilla sollicitudin in vitae ligula.
 {% line 'v' %}
 Morbi at ipsum tempus, dictum ipsum ac, porta nunc. Nulla ac turpis aliquet, venenatis lacus nec, commodo leo. Sed tellus quam, luctus a dui sed, accumsan dapibus orci. Proin sem ex, porta efficitur massa vel, fermentum scelerisque mi.
-</div>
+{% endbox %}
 
 
 {% line %}
 
- Fusce urna nisl, eleifend in sodales at, lacinia ultrices lacus. Donec fringilla ullamcorper turpis. Integer sit amet tellus id urna fringilla sollicitudin in vitae ligula. Mauris iaculis efficitur interdum. Vivamus diam quam, finibus in arcu vitae, aliquam cursus dui. Aliquam at elit faucibus, consectetur nibh quis, condimentum felis. Nullam fermentum, sem in mattis laoreet, felis nibh venenatis leo, vel mattis tortor purus sed dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+ Mauris iaculis efficitur interdum. Vivamus diam quam, finibus in arcu vitae, aliquam cursus dui. Aliquam at elit faucibus, consectetur nibh quis, condimentum felis. Nullam fermentum, sem in mattis laoreet, felis nibh venenatis leo, vel mattis tortor purus sed dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
 
 {% block script %}
 <script>

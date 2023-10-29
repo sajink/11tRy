@@ -7,6 +7,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ './src/_static/': '/' });
 
   eleventyConfig.addShortcode("line", function(dir) {return '<div class="'+(dir??'h')+'line"></div>';});
+  eleventyConfig.addPairedShortcode("box", function(content, classes) {return '<div class="'+(classes??'h-32')+' flex">'+content+'</div>';});
 
   // Minify HTML
   if(isProd) {
@@ -24,14 +25,14 @@ module.exports = function(eleventyConfig) {
   }
 
   return {
-      dir: {
-        input: 'src',
-        output: 'public',
-        data: './_data',
-        includes: './_includes',
-        layouts: './_layouts'
-      },
-      templateFormats: ['md','njk'],
-      htmlTemplateEngine: 'njk'
-    };
+    dir: {
+      input: 'src',
+      output: 'public',
+      data: './_data',
+      includes: './_includes',
+      layouts: './_layouts'
+    },
+    templateFormats: ['md','njk'],
+    htmlTemplateEngine: 'njk'
+  };
 };
